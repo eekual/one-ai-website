@@ -12,7 +12,8 @@
       --red: #E60005;
       --black: #0a0a0a;
       --dark: #111;
-      --border: rgba(255,255,255,0.08);
+      --border: rgba(0,0,0,0.08);
+      --border-mid: rgba(0,0,0,0.12);
       --font: 'Montserrat', sans-serif;
     }
 
@@ -20,8 +21,8 @@
 
     body {
       font-family: var(--font);
-      background: var(--black);
-      color: #fff;
+      background: #ffffff;
+      color: var(--black);
       min-height: 100vh;
       -webkit-font-smoothing: antialiased;
     }
@@ -32,7 +33,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 32px 48px;
-      border-bottom: 1px solid var(--border);
+      border-bottom: 1px solid var(--border-mid);
     }
 
     .logo svg { height: 24px; width: auto; }
@@ -51,7 +52,7 @@
     /* ---- HERO ---- */
     .hero {
       padding: 72px 48px 56px;
-      border-bottom: 1px solid var(--border);
+      border-bottom: 1px solid var(--border-mid);
     }
 
     .hero-eyebrow {
@@ -59,7 +60,7 @@
       font-weight: 700;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.3);
+      color: rgba(0,0,0,0.35);
       margin-bottom: 20px;
     }
 
@@ -69,13 +70,14 @@
       letter-spacing: -0.03em;
       line-height: 1;
       margin-bottom: 16px;
+      color: var(--black);
     }
 
     .hero h1 span { color: var(--red); }
 
     .hero p {
       font-size: 15px;
-      color: rgba(255,255,255,0.4);
+      color: rgba(0,0,0,0.45);
       font-weight: 400;
       max-width: 480px;
       line-height: 1.7;
@@ -86,13 +88,13 @@
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
       gap: 1px;
-      background: var(--border);
-      border-top: 1px solid var(--border);
+      background: var(--border-mid);
+      border-top: 1px solid var(--border-mid);
     }
 
     /* ---- VERSION CARD ---- */
     .version-card {
-      background: var(--black);
+      background: #ffffff;
       padding: 40px 40px 36px;
       display: flex;
       flex-direction: column;
@@ -104,7 +106,7 @@
       color: inherit;
     }
 
-    .version-card:hover { background: #141414; }
+    .version-card:hover { background: #f7f7f7; }
 
     .version-card.active::before {
       content: '';
@@ -115,7 +117,7 @@
     }
 
     .version-card.wip { cursor: default; }
-    .version-card.wip:hover { background: var(--black); }
+    .version-card.wip:hover { background: #ffffff; }
 
     /* version number */
     .v-num {
@@ -123,7 +125,7 @@
       font-weight: 700;
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.2);
+      color: rgba(0,0,0,0.2);
       margin-bottom: 24px;
     }
 
@@ -149,21 +151,21 @@
       border-radius: 50%;
     }
 
-    .v-status.live { background: rgba(0,200,80,0.1); color: #00c850; }
-    .v-status.live .dot { background: #00c850; }
+    .v-status.live { background: rgba(0,160,60,0.08); color: #008c38; }
+    .v-status.live .dot { background: #008c38; }
 
-    .v-status.wip { background: rgba(255,180,0,0.1); color: #ffb400; }
-    .v-status.wip .dot { background: #ffb400; }
+    .v-status.wip { background: rgba(180,110,0,0.08); color: #b07000; }
+    .v-status.wip .dot { background: #b07000; }
 
-    .v-status.planned { background: rgba(255,255,255,0.05); color: rgba(255,255,255,0.3); }
-    .v-status.planned .dot { background: rgba(255,255,255,0.2); }
+    .v-status.planned { background: rgba(0,0,0,0.04); color: rgba(0,0,0,0.3); }
+    .v-status.planned .dot { background: rgba(0,0,0,0.2); }
 
     /* title */
     .v-title {
       font-size: 22px;
       font-weight: 800;
       letter-spacing: -0.02em;
-      color: #fff;
+      color: var(--black);
       margin-bottom: 12px;
       line-height: 1.2;
     }
@@ -172,7 +174,7 @@
     .v-desc {
       font-size: 13px;
       line-height: 1.75;
-      color: rgba(255,255,255,0.4);
+      color: rgba(0,0,0,0.45);
       margin-bottom: 32px;
       flex: 1;
     }
@@ -190,8 +192,8 @@
       font-weight: 600;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.3);
-      border: 1px solid rgba(255,255,255,0.1);
+      color: rgba(0,0,0,0.35);
+      border: 1px solid rgba(0,0,0,0.1);
       padding: 4px 10px;
       border-radius: 2px;
     }
@@ -205,7 +207,7 @@
       font-weight: 700;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: #fff;
+      color: var(--black);
       transition: color 0.2s, gap 0.2s;
     }
 
@@ -216,7 +218,7 @@
       font-weight: 600;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.15);
+      color: rgba(0,0,0,0.2);
     }
 
     .v-cta svg, .v-cta-disabled svg {
@@ -227,12 +229,12 @@
     /* ---- FOOTER ---- */
     footer {
       padding: 28px 48px;
-      border-top: 1px solid var(--border);
+      border-top: 1px solid var(--border-mid);
       display: flex;
       align-items: center;
       justify-content: space-between;
       font-size: 11px;
-      color: rgba(255,255,255,0.2);
+      color: rgba(0,0,0,0.25);
       letter-spacing: 0.06em;
     }
 
@@ -310,7 +312,7 @@
       <div class="v-num">Version 03</div>
       <div class="v-status planned"><span class="dot"></span> Planned</div>
       <div class="v-title">—</div>
-      <p class="v-desc">Reserve slot. Add files to <code style="background:rgba(255,255,255,0.06);padding:2px 6px;border-radius:2px;font-size:12px;">v3/</code> when ready.</p>
+      <p class="v-desc">Reserve slot. Add files to <code style="background:rgba(0,0,0,0.05);padding:2px 6px;border-radius:2px;font-size:12px;">v3/</code> when ready.</p>
       <div class="v-tags">
         <span class="v-tag">TBD</span>
       </div>
