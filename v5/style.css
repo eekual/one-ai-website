@@ -1,0 +1,259 @@
+/* =========================================
+   ONE — SELFWEAR Website V5
+   Narrative edition — verbatim text, pure prose.
+   ========================================= */
+
+:root {
+  --red: #E60005;
+  --black: #0d0d0d;
+  --text: #1a1a1a;
+  --text-secondary: #555555;
+  --rule: #e0e0e0;
+  --bg: #ffffff;
+  --font: 'Montserrat', sans-serif;
+  --nav-h: 68px;
+  --reading-w: 660px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---- NAV ---- */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 clamp(24px, 5vw, 60px);
+  z-index: 100;
+  background: var(--bg);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.4s ease;
+}
+
+.nav.scrolled { border-color: var(--rule); }
+
+.nav-logo { display: flex; align-items: center; text-decoration: none; }
+.nav-logo .logo-svg { height: 26px; width: auto; }
+
+.nav-links {
+  display: flex;
+  gap: clamp(20px, 3vw, 44px);
+}
+
+.nav-links a {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.25s;
+}
+
+.nav-links a:hover { color: var(--red); }
+
+/* ---- PROSE CONTAINER ---- */
+.prose {
+  max-width: var(--reading-w);
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ---- HERO ---- */
+.hero {
+  padding-top: calc(var(--nav-h) + clamp(80px, 10vw, 140px));
+  padding-bottom: clamp(80px, 10vw, 140px);
+  padding-left: clamp(24px, 5vw, 60px);
+  padding-right: clamp(24px, 5vw, 60px);
+  border-bottom: 1px solid var(--rule);
+}
+
+.overline {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 32px;
+}
+
+.hero h1 {
+  font-size: clamp(48px, 8vw, 108px);
+  font-weight: 900;
+  line-height: 0.93;
+  letter-spacing: -0.04em;
+  color: var(--black);
+  margin-bottom: 36px;
+}
+
+.hero .subtitle {
+  font-size: clamp(18px, 2.2vw, 26px);
+  font-weight: 300;
+  line-height: 1.4;
+  color: var(--text);
+  letter-spacing: -0.01em;
+  margin-bottom: 40px;
+}
+
+/* ---- SECTIONS ---- */
+section {
+  padding: clamp(80px, 10vw, 140px) clamp(24px, 5vw, 60px);
+  border-bottom: 1px solid var(--rule);
+}
+
+/* ---- SECTION ANCHORS (h2 = nav targets: Customer, Environment, Brand) ---- */
+section h2 {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 56px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+section h2::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--rule);
+}
+
+/* ---- SUB-HEADINGS (h3 = Empathy Engine, From Selfie to Shipment, etc.) ---- */
+section h3 {
+  font-size: clamp(20px, 2.2vw, 26px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--black);
+  margin-top: 56px;
+  margin-bottom: 24px;
+}
+
+/* ---- BODY TEXT ---- */
+.prose p {
+  font-size: clamp(16px, 1.6vw, 19px);
+  font-weight: 400;
+  line-height: 1.9;
+  color: var(--text);
+  margin-bottom: 28px;
+}
+
+.prose p:last-child { margin-bottom: 0; }
+
+/* ---- LISTS ---- */
+.prose ul {
+  list-style: none;
+  margin: 0 0 28px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.prose ul li {
+  font-size: clamp(16px, 1.6vw, 19px);
+  line-height: 1.7;
+  color: var(--text);
+  padding-left: 24px;
+  position: relative;
+}
+
+.prose ul li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--red);
+  font-weight: 700;
+}
+
+/* ---- SOURCE NOTES ---- */
+.source-note {
+  margin: 12px 0 36px;
+  padding: 14px 20px;
+  border-left: 2px solid var(--rule);
+}
+
+.source-note p {
+  font-size: 11px !important;
+  line-height: 1.65 !important;
+  color: #bbb !important;
+  margin-bottom: 6px !important;
+}
+
+.source-note p:last-child { margin-bottom: 0 !important; }
+
+.source-note a {
+  color: #bbb;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s;
+}
+
+.source-note a:hover { color: var(--red); }
+
+/* ---- FOOTER ---- */
+.footer {
+  padding: 60px clamp(24px, 5vw, 60px);
+}
+
+.footer-inner {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.footer-logo svg { height: 32px; width: auto; }
+
+.footer-tagline {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.footer-links {
+  display: flex;
+  gap: clamp(16px, 3vw, 36px);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-links a {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover { color: var(--red); }
+
+.footer-legal {
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: #aaa;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 700px) {
+  .nav-links { display: none; }
+}
