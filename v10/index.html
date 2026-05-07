@@ -23,7 +23,7 @@
     --max:1200px;
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  html,body{background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;font-weight:300;-webkit-font-smoothing:antialiased;line-height:1.55;overflow-x:hidden}
+  html,body{background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;font-weight:300;-webkit-font-smoothing:antialiased;line-height:1.55;overflow-x:clip}
   ::selection{background:var(--accent);color:#fff}
   a{color:inherit;text-decoration:none}
 
@@ -304,6 +304,12 @@
       margin-top:40px;
     }
     .col-meta{display:none}
+    .col-meta--show{
+      display:flex;flex-direction:row;align-items:baseline;gap:10px;
+      padding-bottom:12px;border-bottom:1px solid var(--line);
+    }
+    .col-meta--show .k{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted)}
+    .col-meta--show .v{font-family:'Archivo',sans-serif;font-weight:600;font-size:13px;color:var(--ink)}
 
     /* When sec-body has inline grid-template-columns override, reset it */
     .sec-body[style*="grid-template-columns"]{grid-template-columns:1fr !important}
@@ -463,10 +469,10 @@
         </div>
       </aside>
       <div>
-        <h1 class="display">Self<span style="color:var(--accent)">wEar:</span><br>Clothes<br>That <em>Love</em><br>You Back.</h1>
+        <h1 class="display">Self<span style="color:var(--accent)">wEar<sup style="font-size:0.38em;vertical-align:super">®</sup>:</span><br>Clothes<br>That <em>Love</em><br>You Back.</h1>
         <div class="hero-lede">
           <p class="lede">The end of mass production. The beginning of co-production — clothing made for one, not for many.</p>
-          <p class="body">For decades, fashion has been made before the person arrives. Designed in abstraction. Manufactured in volume. Stored as inventory. Sold as choice. SELFWEAR reverses the sequence.</p>
+          <p class="body">For decades, fashion has been made before the person arrives. Designed in abstraction. Manufactured in volume. Stored as inventory. Sold as choice. SELFWEAR<sup>®</sup> reverses the sequence.</p>
         </div>
         <div class="hero-foot">
           <div class="stanza">
@@ -511,7 +517,7 @@
       <div class="body">
         <p>Your body changes. Your taste changes. Your life changes. Your sense of self changes. But fashion still asks you to choose from what already exists.</p>
         <p>Online, the system watches you. It rearranges products. It predicts what you may click. It moves the likely match closer — but the product does not change. The inventory is fixed. The system can only sort.</p>
-        <p><strong style="color:var(--ink);font-weight:600">SELFWEAR changes the beginning.</strong> It does not ask you to find yourself inside a warehouse of guesses. It co-creates your garment with you, in real time, based on your responses.</p>
+        <p><strong style="color:var(--ink);font-weight:600">SELFWEAR<sup>®</sup> changes the beginning.</strong> It does not ask you to find yourself inside a warehouse of guesses. It co-creates your garment with you, in real time, based on your responses.</p>
       </div>
     </div>
 
@@ -520,12 +526,12 @@
     </div>
 
     <div class="sec-body" style="margin-top:0;grid-template-columns:200px 1fr 1fr">
-      <div class="col-meta">
+      <div class="col-meta col-meta--show">
         <span class="k">Mechanism</span>
         <span class="v">The Empathy Engine</span>
       </div>
       <div class="body">
-        <p>You see a continuous stream of virtual designs from your favourite brand. Each time, you react instinctively. SELFWEAR reads how you behave and follows your style preferences and not just preferences — the same signals you give off unconsciously when you walk into a room.</p>
+        <p>You see a continuous stream of virtual designs from your favourite brand. Each time, you react instinctively. SELFWEAR<sup>®</sup> reads how you behave and follows your style preferences and not just preferences — the same signals you give off unconsciously when you walk into a room.</p>
         <p>Selection after selection, your choices shape a dynamic flow of preference.</p>
       </div>
       <div>
@@ -540,7 +546,7 @@
     </div>
 
     <div class="sec-body" style="margin-top:80px">
-      <div class="col-meta">
+      <div class="col-meta col-meta--show">
         <span class="k">Fit</span>
         <span class="v">Constructed, not estimated.</span>
       </div>
@@ -550,7 +556,7 @@
       </div>
       <div class="body">
         <p style="font-family:'Archivo Black',sans-serif;font-size:28px;line-height:1;letter-spacing:-0.02em;text-transform:uppercase;color:var(--ink)">Not close.<br>Not almost.<br><span style="color:var(--accent)">Yours.</span></p>
-        <p style="margin-top:24px">SELFWEAR brings dignity back to clothing — because the person comes first.</p>
+        <p style="margin-top:24px">SELFWEAR<sup>®</sup> brings dignity back to clothing — because the person comes first.</p>
       </div>
     </div>
   </div>
@@ -607,7 +613,7 @@
         </ul>
       </div>
       <div>
-        <h4 style="color:var(--accent)">SELFWEAR</h4>
+        <h4 style="color:var(--accent)">SELFWEAR<sup>®</sup></h4>
         <ul>
           <li style="color:#fff">Sell first.</li>
           <li style="color:#fff">Then make.</li>
@@ -626,7 +632,7 @@
         <p>It also changes returns. When fit is guessed, fit fails. Bodies are compressed into sizes; products travel out, then travel back, because approximation was treated as reality.</p>
       </div>
       <div class="body">
-        <p>SELFWEAR starts from the body itself.</p>
+        <p>SELFWEAR<sup>®</sup> starts from the body itself.</p>
         <p style="margin-top:14px">Fewer wrong products need to exist. Fewer unwanted products need to move. Fewer unsold products need to be explained away.</p>
         <p style="margin-top:14px;color:#fff;font-weight:500">This is sustainability at the level of logic — not less damage after production, but less production in the first place.</p>
       </div>
@@ -713,7 +719,7 @@
       <div>
         <div class="sec-num">CLOSING</div>
       </div>
-      <h2 class="display sec-title">The Shift.</h2>
+      <h2 class="display sec-title">The<br>Shift.</h2>
     </header>
 
     <div class="manifest">
@@ -756,7 +762,7 @@
   <div class="shell">
     <div class="eyebrow" style="margin-bottom:24px">A Premium Offer Inside Your Business Model</div>
     <h2 class="display">The Future<br>Of Fashion Is<br>Not More <em>Choice.</em><br>It Is More <em>Truth.</em></h2>
-    <p class="lede" style="max-width:48ch;margin:32px auto 0;text-align:center">Let us show you how your brand can integrate SELFWEAR as a premium offer inside your current business model.</p>
+    <p class="lede" style="max-width:48ch;margin:32px auto 0;text-align:center">Let us show you how your brand can integrate SELFWEAR<sup>®</sup> as a premium offer inside your current business model.</p>
     <div class="row">
       <a class="btn btn--primary" href="mailto:hello@one-ai.fashion">Request a Brief &#8594;</a>
       <a class="btn btn--ghost" href="#top">Read the Manifesto</a>
@@ -773,9 +779,9 @@
         <path fill="#E60005" d="M360.18,85.04c0-46.967-38.072-85.039-85.039-85.039s-85.04,38.072-85.04,85.039c0,36.559,23.07,67.728,55.446,79.747v-62.739c0-14.09,13.249-25.512,29.594-25.512c16.343,0,29.593,11.422,29.593,25.512v0.001v62.738C337.109,152.768,360.18,121.599,360.18,85.04"/>
         <path fill="#E60005" d="M550.077,76.536c-4.268-42.974-40.523-76.535-84.618-76.535c-46.967,0-85.04,38.073-85.04,85.039s38.073,85.039,85.04,85.039c27.973,0,52.792-13.508,68.29-34.356h-51.283c-14.089,0-25.511-13.249-25.511-29.593s11.422-29.594,25.511-29.594c0.001,0,0.001,0,0.001,0H550.077z"/>
       </svg>
-      <span><em>SELFWEAR</em> &mdash; Clothes That Love You.</span>
+      <span><em>SELFWEAR<sup>®</sup></em> &mdash; Clothes That Love You.</span>
     </div>
-    <div class="sig">&copy; 2026 &middot; Position Paper 001 &middot; Max Bock, CEO</div>
+    <div class="sig">SELFWEAR<sup>®</sup> &middot; ONE &copy; 2026</div>
   </div>
 </footer>
 
